@@ -1,0 +1,43 @@
+### Starting build.
+# Target: ftest.ml.depends, tags: { extension:ml, file:ftest.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules ftest.ml > ftest.ml.depends # cached
+# Target: FordFulkerson.mli.depends, tags: { extension:mli, file:FordFulkerson.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules FordFulkerson.mli > FordFulkerson.mli.depends # cached
+# Target: graph.mli.depends, tags: { extension:mli, file:graph.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules graph.mli > graph.mli.depends # cached
+# Target: graph.cmi, tags: { byte, compile, extension:mli, file:graph.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o graph.cmi graph.mli # cached
+# Target: FordFulkerson.cmi, tags: { byte, compile, extension:mli, file:FordFulkerson.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o FordFulkerson.cmi FordFulkerson.mli # cached
+# Target: gfile.mli.depends, tags: { extension:mli, file:gfile.mli, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules gfile.mli > gfile.mli.depends # cached
+# Target: gfile.cmi, tags: { byte, compile, extension:mli, file:gfile.mli, interf, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o gfile.cmi gfile.mli # cached
+# Target: main.ml.depends, tags: { extension:ml, file:main.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules main.ml > main.ml.depends
+# Target: Printer.ml.depends, tags: { extension:ml, file:Printer.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules Printer.ml > Printer.ml.depends # cached
+# Target: Printer.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:Printer.cmo, file:Printer.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o Printer.cmo Printer.ml # cached
+# Target: main.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:main.cmo, file:main.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o main.cmo main.ml
++ /usr/bin/ocamlc.opt -c -o main.cmo main.ml
+File "main.ml", line 10, characters 5-9:
+Warning 26: unused variable flow.
+# Target: ftest.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:ftest.cmo, file:ftest.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o ftest.cmo ftest.ml # cached
+# Target: FordFulkerson.ml.depends, tags: { extension:ml, file:FordFulkerson.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules FordFulkerson.ml > FordFulkerson.ml.depends
+# Target: gfile.ml.depends, tags: { extension:ml, file:gfile.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules gfile.ml > gfile.ml.depends # cached
+# Target: gfile.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:gfile.cmo, file:gfile.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o gfile.cmo gfile.ml # cached
+# Target: graph.ml.depends, tags: { extension:ml, file:graph.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep.opt -modules graph.ml > graph.ml.depends # cached
+# Target: graph.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:graph.cmo, file:graph.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o graph.cmo graph.ml # cached
+# Target: FordFulkerson.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:FordFulkerson.cmo, file:FordFulkerson.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc.opt -c -o FordFulkerson.cmo FordFulkerson.ml
+# Target: ftest.byte, tags: { byte, dont_link_with, extension:byte, file:ftest.byte, link, ocaml, program, quiet }
+/usr/bin/ocamlc.opt graph.cmo FordFulkerson.cmo gfile.cmo Printer.cmo main.cmo ftest.cmo -o ftest.byte # cached
+# Compilation successful.
